@@ -1,4 +1,4 @@
-FROM ilbru/openlamp-core
+FROM ilbru/openserver-core
 
 MAINTAINER "Vjacheslav Borisov <slavb18@gmail.com>"
 LABEL description="use this image to host your php apps"
