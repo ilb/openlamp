@@ -1,2 +1,9 @@
 # openlamp
-Opensuse docker image with LAMP stack
+Opensuse docker container with LAMP stack
+
+##run server
+sh start.sh
+
+##stop server
+sh stop.sh
+

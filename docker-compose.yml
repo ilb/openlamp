@@ -4,25 +4,25 @@ version: '3.7'
 # Список наших сервисов (контейнеров)
 services:
   web:
-    image: "ilbru/openserver-php:latest"
+    image: "ilbru/openserver:latest"
     ports:
       - "8080:80"
-      - "443:443"
+      #- "443:443"
     volumes:
       - ${WORK_PATH}:/srv/www/htdocs/
-      - ./vendor/logs:/var/log/apache2
+      - ./logs:/var/log/apache2
     links:
       - db
   db:
     image: "mariadb"
     command: mysqld --sql_mode=""
     volumes:
-      - ./vendor/database/mysql:/var/lib/mysql
+      - ./database/mysql:/var/lib/mysql
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: 123456
-      MYSQL_DATABASE: mainbase
+      MYSQL_DATABASE: openserver
   adminer:
     image: adminer
     restart: always
