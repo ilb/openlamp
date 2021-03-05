@@ -1,9 +1,9 @@
 # openlamp
 Opensuse docker container with LAMP stack
 
-##run server
+## run server
 sh start.sh
 
-##stop server
+## stop server
 sh stop.sh
 
