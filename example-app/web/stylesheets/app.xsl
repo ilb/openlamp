@@ -52,6 +52,9 @@
                                     <div class="text-sm text-gray-900">host=db</div>
                                     <div class="text-sm text-gray-900">username=root</div>
                                     <div class="text-sm text-gray-900">password=123456</div>
+                                    <div class="text-sm text-gray-900">
+                                        <a href="localhost:8081" target="_blank" class="text-green-600 underline" title="Администрирование MySql">Перейти в Adminer Editor</a>
+                                    </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right">
                                     <xsl:choose>
