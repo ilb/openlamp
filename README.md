@@ -5,7 +5,7 @@ Opensuse docker container with LAMP stack
 sh start.sh
 
 ## example app
-http://localhost:8080/web/app.php
+http://localhost:8080/app/web/app.php
 
 ## adminer editor sql
 http://localhost:8081/
