@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN" "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg-flat.dtd">
+<?xml-stylesheet type="text/xsl" href="/oooxhtml/oooxhtml.xsl"?><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">@page {margin-top:2cm;margin-bottom:2cm;margin-left:2cm;margin-right:2cm;}</style>
+    <title>Подготовка хоста </title>
+    <meta name="generator" content="oooxhtml/1.5"/>
+    <meta name="HeadURL" content="$HeadURL$"/>
+  </head>
+  <body>
+    <div class="container text">
+      <h1 id="podgotovka_hosta">Подготовка хоста для openserver</h1>
+      <p>На хосте создать иерархию (есть пример - <b>example-app</b>)</p>
+      <p class="PlantUML">@startsalt</p>
+      <p class="PlantUML">{</p>
+      <p class="PlantUML">{T</p>
+      <p class="PlantUML">+ bystrobank</p>
+      <p class="PlantUML">++ .config</p>
+      <p class="PlantUML">++ work</p>
+      <p class="PlantUML">++ apps</p>
+      <p class="PlantUML">++ log</p>
+      <p class="PlantUML">}</p>
+      <p class="PlantUML">}</p>
+      <p>
+        <img alt="Изображение1" style="width:3.336cm;height:2.9cm" src="data:;base64,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"/>
+      </p>
+      <p class="PlantUML">@endsalt</p>
+      <h2 id="_">.config</h2>
+      <p>Создать внутри файл <b>context.xml</b></p>
+      <h2 id="work">work</h2>
+      <p>В этой директории создаем <span style="text-decoration:underline;">директорию приложения X</span> или скачиваем с github.</p>
+      <h2 id="context_xml_"><b>context.xml, </b>apps и log</h2>
+      <p>Нужны для перепределения настроек приложения</p>
+      <h1 id="primer">Пример</h1>
+      <p>К примеру, возьмем приложение с github.</p>
+      <p>Перейдем в work и выполним команду </p>
+      <p>git clone <a href="mailto:git@github.com">git@github.com</a>:ilb/knowledgebase.git knowledgebase</p>
+      <p>в папке <b>work</b> появится директория с названием <b>knowledgebase</b>.</p>
+      <p>Перейдем в <b>.config</b> и отредактируем файл <b>context.xml </b></p>
+      <p>добавим</p>
+      <p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</p>
+      <p>&lt;Context path="/"&gt;</p>
+      <p>    &lt;Environment name=".apps.knowledgebase.db" value="mysql://db:3306/knowledgebase" type="java.lang.String" override="false"/&gt;</p>
+      <p>    &lt;Environment name="apps.knowledgebase.db_USER" value="root" type="java.lang.String" override="false"/&gt;</p>
+      <p>    &lt;Environment name="apps.knowledgebase.db_PASSWORD" value="123456" type="java.lang.String" override="false"/&gt;</p>
+      <p>&lt;/Context&gt;</p>
+      <p>Это переопределили переменные, которые есть в файле <b>web.xml</b> в приложении <b>knowledgebase.</b></p>
+      <p>В <b>web.xml</b> так же есть переменная </p>
+      <p style="background-color:#2b2b2b;">
+        <span style="color:#e8bf6a;">&lt;env-entry&gt;</span>
+        <br/>
+        <span style="color:#e8bf6a;">    &lt;description&gt;</span>
+        <span style="color:#a9b7c6;">путь до файлов knowledgebase</span>
+        <span style="color:#e8bf6a;">&lt;/description&gt;</span>
+        <br/>
+        <span style="color:#e8bf6a;">    &lt;env-entry-name&gt;</span>
+        <span style="color:#a9b7c6;">apps.knowledgebase.filespath</span>
+        <span style="color:#e8bf6a;">&lt;/env-entry-name&gt;</span>
+        <br/>
+        <span style="color:#e8bf6a;">    &lt;env-entry-type&gt;</span>
+        <span style="color:#a9b7c6;">java.lang.String</span>
+        <span style="color:#e8bf6a;">&lt;/env-entry-type&gt;</span>
+        <br/>
+        <span style="color:#e8bf6a;">    &lt;env-entry-value&gt;</span>
+        <span style="color:#a9b7c6;">/var/apps/knowledgebase</span>
+        <span style="color:#e8bf6a;">&lt;/env-entry-value&gt;</span>
+        <br/>
+        <span style="color:#e8bf6a;">&lt;/env-entry&gt;</span>
+      </p>
+      <p>Что бы <b>openserver</b> обнаружил такую директорию <span style="text-decoration:underline;">/var/apps/knowledgebase</span> сделаем следующее:</p>
+      <ul>
+        <li>
+          <p>перейдем в <b>/bystrobank/apps</b></p>
+        </li>
+        <li>
+          <p>создадим папку <b>knowledgebase</b></p>
+        </li>
+      </ul>
+      <p>
+        <b/>
+      </p>
+      <p>Подготовка хоста завершена.</p>
+      <p/>
+      <p/>
+      <h1 id="zapusk_openserver">Запуск openserver</h1>
+      <p>Сначала отредактировать файл .env</p>
+      <p>Указать <span style="text-decoration:underline;">WORK_PATH=/{path}/bystrobank</span></p>
+      <p>Для запуска выполнить команду </p>
+      <p style="font-weight:bold;">sh start.sh</p>
+      <h1 id="podgotovka_baz_">Подготовка базы</h1>
+      <p>Используется Adminer</p>
+      <p>Перейти можно по <a href="http://localhost:8081/">http://localhost:8081</a></p>
+      <p>Сервер — db</p>
+      <p>Имя пользователя — root</p>
+      <p>пароль - 123456</p>
+      <p>После входа нужно <a href="http://localhost:8081/?server=db&amp;username=root&amp;database=">Создать базу данных</a></p>
+      <p>Базу данных назвать так же как и приложение. </p>
+      <p>В нашем случае название базы будет <b>knowledgebase.</b></p>
+      <p>После создания выбрать базу <b>knowledgebase </b>и сделать импорт sql скриптов<br/>sql/schema.sql</p>
+      <p>sql/tables.sql</p>
+      <h1 id="prosmotr_prilozenij"><span style="font-size:18.2000007629395pt;font-weight:bold;">Просмотр приложения</span> в браузере</h1>
+      <p>Открыть приложение можно по <a href="http://localhost:8080/knowledgebase/web/index.php">http://localhost:8080/knowledgebase/web/index.php</a></p>
+      <h1 id="raz">Разработка</h1>
+      <h3 id="generacij_koda_s_happymeal">Генерация кода с happymeal</h3>
+      <p>Для этого нужно зайти в сервис, docker контейнера, <b>web</b>.</p>
+      <p>Внутри <b>openserver</b> выполнить команду <br/><span style="font-size:10.5pt;">(т. е. в каталоге, где присутсвует файл docker-compose.yml)</span></p>
+      <p>docker-compose exec web bash</p>
+      <p>далее выполнить команду</p>
+      <p>cd srv/www/htdocs/knowledgebase/tools</p>
+      <p>sh generate_classes.sh</p>
+      <p/>
+    </div>
+  </body>
+</html>

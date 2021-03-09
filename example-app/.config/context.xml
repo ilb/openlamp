@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/">
+    <Environment name="apps.app.db" value="mysql://db:3306/app" type="java.lang.String" override="false"/>
+    <Environment name="apps.app.db_USER" value="root" type="java.lang.String" override="false"/>
+    <Environment name="apps.app.db_PASSWORD" value="123456" type="java.lang.String" override="false"/>
+</Context>
