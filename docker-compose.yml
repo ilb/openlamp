@@ -14,6 +14,8 @@ services:
       - ${WORK_PATH}/log:/var/log/webapp
       - ./logs/apache2:/var/log/apache2
       - ./logs/php:/var/log/php
+      - ./code/web.sh:/var/code/web.sh
+    entrypoint: /var/code/web.sh
     links:
       - db
   db:
