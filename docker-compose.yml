@@ -7,13 +7,13 @@ services:
     image: "ilbru/openserver:latest"
     ports:
       - "8080:80"
-      #- "443:443"
     volumes:
       - ${WORK_PATH}/work:/srv/www/htdocs/
       - ${WORK_PATH}/.config/context.xml:/var/lib/wwwrun/.config/context.xml
       - ${WORK_PATH}/apps:/var/apps
       - ${WORK_PATH}/log:/var/log/webapp
-      - ./logs:/var/log/apache2
+      - ./logs/apache2:/var/log/apache2
+      - ./logs/php:/var/log/php
     links:
       - db
   db:
