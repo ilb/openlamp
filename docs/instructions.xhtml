@@ -27,6 +27,9 @@
       <p>git clone <a href="mailto:git@github.com">git@github.com</a>:ilb/knowledgebase.git knowledgebase</p>
       <p>в папке <b>work</b> появится директория с названием <b>knowledgebase</b>.</p>
       <p>Перейдем в <b>.config</b> и отредактируем файл <b>context.xml </b></p>
+      <p>
+        <b/>
+      </p>
       <p>добавим</p>
       <p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</p>
       <p>&lt;Context path="/"&gt;</p>
@@ -57,9 +60,6 @@
         <br/>
         <span style="color:#e8bf6a;">&lt;/env-entry&gt;</span>
       </p>
-      <p style="background-color:#2b2b2b;">
-        <span style="color:#e8bf6a;"/>
-      </p>
       <p>Что бы <b>openserver</b> обнаружил такую директорию /var/apps/knowledgebase сделаем следующее:</p>
       <ul>
         <li>
@@ -80,10 +80,13 @@
       <p>Перейти можно по <a href="http://localhost:8081/">http://localhost:8081</a></p>
       <p>Сервер — db</p>
       <p>Имя пользователя — root</p>
-      <p>пароль - 123456</p>
+      <p>пароль — 123456</p>
       <p>После входа нужно <a href="http://localhost:8081/?server=db&amp;username=root&amp;database=">Создать базу данных</a></p>
       <p>Базу данных назвать так же как и приложение. </p>
       <p>В нашем случае название базы будет <b>knowledgebase.</b></p>
+      <p>
+        <b/>
+      </p>
       <p>После создания выбрать базу <b>knowledgebase </b>и сделать импорт sql скриптов<br/>sql/schema.sql</p>
       <p>sql/tables.sql</p>
       <h1 id="prosmotr_prilozenij"><span style="font-size:18.2000007629395pt;font-weight:bold;">Просмотр приложения</span> в браузере</h1>
@@ -92,12 +95,10 @@
       <h3 id="generacij_koda_s_happymeal">Генерация кода с happymeal</h3>
       <p>Для этого нужно зайти в сервис, docker контейнера, <b>web</b>.</p>
       <p>Внутри <b>openserver</b> выполнить команду <br/><span style="font-size:10.5pt;">(т. е. в каталоге, где присутсвует файл docker-compose.yml)</span></p>
-      <p>
-        <span style="font-size:10.5pt;"/>
-      </p>
       <p>docker-compose exec web bash</p>
+      <p>попадаем сразу в каталог srv/www/htdocs</p>
       <p>далее выполнить команду</p>
-      <p>cd srv/www/htdocs/knowledgebase/tools</p>
+      <p>cd knowledgebase/tools</p>
       <p>sh generate_classes.sh</p>
     </div>
   </body>
